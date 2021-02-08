@@ -3,26 +3,6 @@ import random
 
 class Lab03Task1:
 
-    def demo(self):
-        try:
-            size = int(input("Enter size of array: "))
-            only_positives = []
-            positives_and_negatives = []
-            for i in range(0, size):
-                only_positives.append(random.randint(0, 50))
-                positives_and_negatives.append(random.randint(-60, 60))
-            print("Beginning arrays:")
-            print(*only_positives, sep=',')
-            print(*positives_and_negatives, sep=',')
-            print("-------------------------------------")
-            only_positives = self.insertion_sort(only_positives)
-            positives_and_negatives = self.insertion_sort(positives_and_negatives)
-            print("After insertion sort:")
-            print(*only_positives, sep=',')
-            print(*positives_and_negatives, sep=',')
-        except ValueError:
-            return "Invalid input!"
-
     def __get_ready_sequence(self, array):
         sequence = [array[0]]
         for index in range(1, len(array)):
@@ -56,4 +36,25 @@ class Lab03Task1:
         return output_array
 
 
-Lab03Task1().demo()
+def demo():
+    try:
+        size = int(input("Enter size of array: "))
+        only_positives = []
+        positives_and_negatives = []
+        program = Lab03Task1()
+        for i in range(0, size):
+            only_positives.append(random.randint(0, 50))
+            positives_and_negatives.append(random.randint(-60, 60))
+
+        print(f"Beginning arrays:\n1.{only_positives}\n2.{positives_and_negatives}")
+        print("-------------------------------------")
+
+        only_positives = program.insertion_sort(only_positives)
+        positives_and_negatives = program.insertion_sort(positives_and_negatives)
+
+        print(f"After insertion sort:\n1.{only_positives}\n2.{positives_and_negatives}")
+    except ValueError:
+        return "Invalid input!"
+
+
+demo()
