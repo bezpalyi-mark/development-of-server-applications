@@ -2,7 +2,7 @@ import math
 
 
 class Lab0102:
-    cache = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
+    __cache = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
 
     def __is_prime(self, number):
         if number <= 1:
@@ -17,16 +17,16 @@ class Lab0102:
 
     def __next_prime(self, prev_prime):
         if prev_prime <= 1:
-            return self.cache[0]
-        elif prev_prime <= self.cache[len(self.cache) - 1]:
-            for prime in self.cache:
+            return self.__cache[0]
+        elif prev_prime <= self.__cache[len(self.__cache) - 1]:
+            for prime in self.__cache:
                 if prime > prev_prime:
                     return prime
         else:
             new_prime = prev_prime
             while not self.__is_prime(new_prime):
                 new_prime += 1
-            self.cache.append(prev_prime)
+            self.__cache.append(prev_prime)
             return new_prime
 
     def __get_prime_dividers(self, number):

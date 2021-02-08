@@ -1,3 +1,4 @@
-# Development of server applications
-##Author: Bezpalyi Mark Leonidovich
-###Last added lab number: 2
+###Спеціальність: Комп'ютерна інженерія
+###Предмет: Проектування серверних застосунків
+###Група: КІТ-118г
+###Безпалий Марко Леонідович
