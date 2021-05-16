@@ -1,0 +1,1 @@
+{"title": "Structure and Interpretation of Computer Programs", "copyright_year": 2021, "authors": ["Harold Abelson", "Gerald Jay Sussman", "Julie Sussman"], "cost": 40.41}
